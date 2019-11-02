@@ -32,19 +32,20 @@ If a parameter is in single quotes `''` you must include the quotes around the p
 
 Once the Pixel Shader hack is installed, it can be called easily using [Sean's javascript from dialog hack](https://github.com/seleb/bitsy-hacks/blob/master/dist/javascript-dialog.js).
 
+These shaders seem to sometimes be slow in Firefox, and other times work fine. Either way, Chrome seems to run them fine. 
+
 ### Activating a shader
 Activating and deactivating the shader effects are super simple, just add the following steps to a Bitsy dialog.
 
-1. Set your desired shader by using `curShader = shaderName`
-2. Turn on the shader by using `activateShader()`
-3. Optionally set shader parameters with `shaderParams.parameterName = yourValue`
-4. When you want to turn off the shader, call `deactivateShader()`
+1. Turn on the shader by using `activateShader(shaderName)`
+2. Optionally set shader parameters with `shaderParams.parameterName = yourValue`
+3. When you want to turn off the shader, call `deactivateShader()`
 
-**Example:** `Whoa, the world is all wavy!(js "curShader = warpShader; activateShader(); shaderParams.amplitued = 100")` will set the shader to **warpShader**, turn it on, and then set the amplitude of the waves to 100, all from within a Bitsy dialog.
+**Example:** `Whoa, the world is all wavy!(js "activateShader(warpShader); shaderParams.amplitued = 100")` will set the shader to **warpShader**, turn it on, and then set the amplitude of the waves to 100, all from within a Bitsy dialog.
 
 If you want your shader to activate when the game starts, instead of adding the code to a dialog, open your **.html** file and at the very bottom where it says `<body onload='startExportedGame();'>` add the code after the `;`
 
-**EX:**`<body onload='startExportedGame(); curShader = warpShader; activateShader();'>`
+**EX:**`<body onload='startExportedGame(); activateShader(warpShader);'>`
 
 ### Shaders and Parameters
 

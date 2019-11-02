@@ -50,7 +50,8 @@ class ShaderFunc{
 	}
 }
 
-function activateShader(){
+function activateShader(shaderIn){
+	curShader = shaderIn;
 	pixelShaderOn = true;
 }
 
