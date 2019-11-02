@@ -16,11 +16,17 @@ function getItemId(itemName){
 }
 
 function getItemFromList(itemId){
-	return item[itemId];
+	return item[eval(itemId)];
 }
 
-function getItemInRoom(itemId){
-	return getRoom().items[itemId];
+function getItemInRoom(itemId, roomId){
+	let thisRoom = room[eval(roomId)]
+
+	for (let itm = 0; itm < thisRoom.items.length; itm++){
+		if (thisRoom.items[itm].id = itemId){
+			return thisRoom.items[itm];
+		}
+	}
 }
 
 function getRoomId(roomName){
@@ -106,7 +112,11 @@ function removeAllItemsFromWorld(itemName){
 }
 
 function swapItem(oldItemName, newItemName, roomName){
-	let oldItem = getItemInRoom(getItemId(oldItemName));
+	if (roomName == undefined){
+		roomName = room[eval(curRoom)].name
+	}
+
+	let oldItem = getItemInRoom(getItemId(oldItemName), getRoomId(roomName));
 	let itemFound = removeItemFromRoom(oldItemName, roomName);
 	spawnItem(newItemName, oldItem.x, oldItem.y, roomName);
 	return (itemFound == 1);
@@ -127,7 +137,7 @@ function moveItem(itemName, newX, newY, msStep){
 }
 
 function _moveItem(itmId, newX, newY){
-	let roomItem = getItemInRoom(itmId);
+	let roomItem = getItemInRoom(itmId, curRoom);
 	let dirList = [
 		[1, 0],
 		[0, 1],
