@@ -33,7 +33,7 @@ If a parameter is in single quotes `''` you must include the quotes around the p
 Once the Pixel Shader hack is installed, it can be called easily using [Sean's javascript from dialog hack](https://github.com/seleb/bitsy-hacks/blob/master/dist/javascript-dialog.js).
 
 ### Activating a shader
-Activating and deactivating the shader effects are super simple. These will be added to a Bitsy dialog.
+Activating and deactivating the shader effects are super simple, just add the following steps to a Bitsy dialog.
 
 1. Set your desired shader by using `curShader = shaderName`
 2. Turn on the shader by using `activateShader()`
