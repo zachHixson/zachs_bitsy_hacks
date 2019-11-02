@@ -28,7 +28,7 @@ If a parameter is in single quotes `''` you must include the quotes around the p
 
 ---
 
-## [Pixel Shaders](hacks\pixel_shader.js)
+## [Pixel Shaders](hacks/pixel_shader.js)
 
 Once the Pixel Shader hack is installed, it can be called easily using [Sean's javascript from dialog hack](https://github.com/seleb/bitsy-hacks/blob/master/dist/javascript-dialog.js).
 

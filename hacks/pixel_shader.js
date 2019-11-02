@@ -1,3 +1,10 @@
+/*
+Pixel Shaders
+- Adds pixel shader functionality to your bitsy project which can be called from the javascript from dialog hack, or from your own code
+
+Programmer: Zach Hixson
+Year: 2019
+*/
 let pixelShaderOn = true;
 let curShader = null;
 let time = 0;

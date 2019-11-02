@@ -1,3 +1,10 @@
+/*
+Helper Functions
+- Adds some usefull helper functions which you can call from the javascript from dialog hack or from your own code.
+
+Programmer: Zach Hixson
+Year: 2019
+*/
 let moveInterval;
 
 function getItemId(itemName){
