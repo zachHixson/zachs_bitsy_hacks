@@ -89,11 +89,13 @@ If you want editable parameters, you need to include the following code at the t
 if (shaderParams && shaderParams.name != "unique_id"){
     for (let p in shaderParams){delete shaderParams[p]}
     shaderParams = {
+        name : "unique_id",
         p1: default_val,
         p2: devault_val
     }
 }
 ```
+The above code clears the previous parameters and replaces them with ones specific to your shader.
 
 The `args` input contains the following info:
 
