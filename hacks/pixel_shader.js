@@ -53,6 +53,7 @@ class ShaderFunc{
 function activateShader(shaderIn){
 	curShader = shaderIn;
 	pixelShaderOn = true;
+	callPixelShader(canvas);
 }
 
 function deactivateShader(){
@@ -105,10 +106,11 @@ function callPixelShader(canvasIn){
 	
 	time++;
 }
+
 function warpShader(args, canvasIn){
 	//setup parameters
 	if (shaderParams && shaderParams.name != "warp"){
-		delete shaderParams;
+		for (let p in shaderParams){delete shaderParams[p]}
 		shaderParams = {
 			name : "warp",
 			speedDiv : 30,
@@ -127,7 +129,7 @@ function warpShader(args, canvasIn){
 function chromaShader(args, canvasIn){
 	//setup parameters
 	if (shaderParams && shaderParams.name != "chroma"){
-		delete shaderParams;
+		for (let p in shaderParams){delete shaderParams[p]}
 		shaderParams = {
 			name : "chroma",
 			amplitude : 3,
@@ -160,7 +162,7 @@ function chromaShader(args, canvasIn){
 function shakeShader(args, canvasIn){
 	//setup parameters
 	if (shaderParams && shaderParams.name != "shake"){
-		delete shaderParams;
+		for (let p in shaderParams){delete shaderParams[p]}
 		shaderParams = {
 			name : "shake",
 			amplitude : 3,
@@ -190,7 +192,7 @@ function shakeShader(args, canvasIn){
 function spotlightShader(args, canvasIn){
 	//setup parameters
 	if (shaderParams && shaderParams.name != "spotlight"){
-		delete shaderParams;
+		for (let p in shaderParams){delete shaderParams[p]}
 		shaderParams = {
 			name : "spotlight",
 			x : canvas.width / 2,
