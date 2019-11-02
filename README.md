@@ -43,6 +43,7 @@ Activating and deactivating the shader effects are super simple, just add the fo
 **Example:** `Whoa, the world is all wavy!(js "curShader = warpShader; activateShader(); shaderParams.amplitued = 100")` will set the shader to **warpShader**, turn it on, and then set the amplitude of the waves to 100, all from within a Bitsy dialog.
 
 If you want your shader to activate when the game starts, instead of adding the code to a dialog, open your **.html** file and at the very bottom where it says `<body onload='startExportedGame();'>` add the code after the `;`
+
 **EX:**`<body onload='startExportedGame(); curShader = warpShader; activateShader();'>`
 
 ### Shaders and Parameters
