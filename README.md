@@ -3,7 +3,9 @@
 ### Overview
 This repository contains two hacks: A system to run [Pixel Shaders](hacks/pixel_shader.js) which help you add cool visual effects, as well as a couple of [Javascript Helper Functions](hacks/helper_functions.js) that you can be called easily using [Sean's javascript from dialog hack](https://github.com/seleb/bitsy-hacks/blob/master/dist/javascript-dialog.js)
 
-To install, simply copy and paste the hack between two `<script></script>` tags at the bottom of your downloaded **.html** file. 
+To install, simply copy and paste the hack between two `<script></script>` tags at the bottom of your downloaded **.html** file.
+
+You can play a small demo which shows off all the features listed on this page [here](https://zachtheperson.itch.io/zachs-bitsy-hacks-demo)
 
 ---
 
